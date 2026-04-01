@@ -1,0 +1,514 @@
+/* ================= RESET ================= */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1a1a1a;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+
+  box-sizing: border-box;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 60px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.nav-links a {
+  color: #1e3a5f;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+  flex-shrink: 0;
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #3f6ea5;
+}
+
+/* ================= HERO ================= */
+.hero {
+  margin-top: 85px;
+  padding: 20px 20px;
+  /* background: linear-gradient(to bottom, #f5f7fb, #eef2f8); */
+  background: 
+  linear-gradient(
+    rgba(30, 29, 29, 0.65),
+      rgba(26, 25, 25, 0.65)
+      /* rgba(16, 16, 16, 0.85),
+      rgba(12, 12, 12, 0.85) */
+    ),
+    url("../logo/conference.jpg"); /* <-- your image path */
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 850px;
+  text-align: center;
+  padding: 20px 10px 40px;
+}
+
+/* ORGANIZER */
+.organizer {
+  margin-bottom: 20px;
+}
+
+.org-text {
+  font-size: 20px;
+  font-weight: 600;
+  /* color: #1e3a5f; */
+  color: #cfe8ff;
+  letter-spacing: 0.5px;
+}
+
+.org-sub {
+  font-size: 14px;
+  font-weight: 500;
+  /* color: #3f6ea5; */
+  color: #9fc7ff;
+  margin-top: 4px;
+}
+
+.org-light {
+  font-size: 14px;
+  /* color: #777; */
+  color: #d1d5db;
+  margin-top: 2px;
+}
+
+/* TITLE */
+/* .hero-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #1e3a5f;
+  line-height: 1.5;
+  margin: 25px 0;
+} */
+.hero-title {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* CONFERENCE NAME */
+.conf-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #3f6ea5;
+  margin-bottom: 10px;
+}
+
+.conf-name {
+  color: #ffd700; /* gold */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* META (DATE + MODE) */
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  /* color: #555; */
+   color: #e5e7eb;
+  margin-bottom: 25px;
+}
+
+.divider {
+  color: #9ca3af;
+  /* color: #aaa; */
+}
+
+/* HERO LOGO */
+.hero-logo img {
+  height: 80px;
+  margin-top: 10px;
+}
+
+/* ================= HERO BUTTONS ================= */
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* BASE BUTTON */
+.btn {
+  padding: 12px 26px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* GOLD BUTTON (PRIMARY) */
+.btn-gold {
+  background: linear-gradient(135deg, #c8a951, #a8893d);
+  color: white;
+  box-shadow: 0 4px 15px rgba(200, 169, 81, 0.4);
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(200, 169, 81, 0.6);
+}
+
+/* OUTLINE BUTTON (SECONDARY) */
+.btn-outline {
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ================= SECTION ================= */
+section {
+  padding: 60px 120px;
+}
+
+/* ================= ABOUT ================= */
+.about-box {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-box h2 {
+  color: #1e3a5f;
+  margin-bottom: 15px;
+}
+
+.about-box p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* ================= COMMITTEE ================= */
+.committee-section {
+  background: #f9fbff;
+  /* margin-top: 20px; */
+}
+
+.committee-section h2 {
+  margin-top: 2px;
+  color: #1e3a5f;
+  font-size: 22px;
+  text-align: center;
+
+}
+
+.committee-section h3 {
+  margin-top: 40px;
+  color: #1e3a5f;
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.card span {
+  color: #666;
+  font-size: 13px;
+}
+
+.card:hover {
+  background: #3f6ea5;
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* ================= ABOUT LAYOUT ================= */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-box {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1e3a5f;
+  color: white;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hero-logo img {
+    height: 65px;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    margin-top: 20px;
+  }
+}
+
+/* ================= TABLE ================= */
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.date-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* HEADER */
+.date-table th {
+  background: linear-gradient(135deg, #1e3a5f, #2c5282);
+  color: white;
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* ROWS */
+.date-table td {
+  padding: 14px;
+  font-size: 14px;
+  color: #444;
+  border-bottom: 1px solid #eee;
+}
+
+/* HOVER EFFECT */
+.date-table tr:hover td {
+  background: #f5f7fb;
+}
+
+/* LAST ROW FIX */
+.date-table tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* TABLE HEAD MULTI ROW FIX */
+.date-table th {
+  text-align: center;
+}
+
+/* FIRST COLUMN BOLD */
+.date-table td:first-child {
+  font-weight: 600;
+  color: #1e3a5f;
+}
+
+/* SMALL TEXT INSIDE CELL */
+.date-table span {
+  font-size: 12px;
+  color: #777;
+}
+
+
+/* ================= NOTES ================= */
+.note-box {
+  margin-top: 20px;
+  padding: 18px;
+  background: #fff8e6; /* soft gold tint */
+  border-left: 4px solid #c8a951;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.note-box p {
+  margin: 6px 0;
+}
+.table-note {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+}
+
+
+/* ================= CONTACT IMAGE ================= */
+.contact-image {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-image img {
+
+  
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.contact-image img:hover {
+  transform: scale(1.02);
+}
+
+/* AIM TABLE SPECIFIC IMPROVEMENT */
+.date-table td {
+  vertical-align: top;
+  line-height: 1.8;
+}
+
+
+/* ================= SPEAKER CARD ================= */
+
+.speaker-card {
+  text-align: center;
+  padding: 20px;
+}
+
+/* FULL IMAGE (NO CROP) */
+.speaker-img {
+  width: 100%;
+  height: auto;        /* IMPORTANT: keeps full image */
+  object-fit: contain; /* shows full image */
+  margin-bottom: 12px;
+  background: #f5f7fb; /* clean background */
+}
+
+/* NAME */
+.speaker-card h4 {
+  margin: 8px 0;
+  color: #1e3a5f;
+  font-size: 16px;
+}
+
+/* DESIGNATION */
+.designation {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* EMAIL */
+.email {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+/* TIME */
+.time {
+  font-size: 13px;
+  font-weight: 600;
+  color: #c8a951;
+}
+.sub-heading {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
