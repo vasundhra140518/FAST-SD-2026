@@ -512,3 +512,50 @@ footer {
   color: #666;
   margin-bottom: 30px;
 }
+
+
+/* ================= FEE SECTION ================= */
+.fee-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* TEXT */
+.fee-text {
+  flex: 1;
+}
+
+.fee-text h4 {
+  margin-bottom: 10px;
+  color: #1e3a5f;
+}
+
+/* QR IMAGE */
+.fee-qr {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.fee-qr img {
+  width: 220px;
+  height: auto;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .fee-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fee-qr img {
+    width: 180px;
+  }
+}
