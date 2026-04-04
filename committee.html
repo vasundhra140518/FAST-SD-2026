@@ -269,9 +269,16 @@
 </footer>
 
 <script>
+  // 1. Function for the Hamburger Menu
   function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
   }
+
+  // 2. Force page to top on refresh
+  if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
 </script>
 
 </body>
