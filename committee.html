@@ -9,15 +9,20 @@
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- Navbar -->
 <nav>
+  <!-- HAMBURGER -->
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+
   <div class="nav-left">
     <img src="logo/logo.png" alt="FAST-SD 2026 Logo" class="logo">
   </div>
 
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
-    <a href="committee.html" class="active">Committee</a>
+    <a href="committee.html">Committee</a>
     <a href="papers.html">Papers</a>
     <a href="speakers.html">Speakers</a>
     <a href="registration.html">Registration</a>
@@ -26,7 +31,7 @@
 </nav>
 
 <!-- ================= HEADER SPACE FIX ================= -->
-<div style="height: 40px;"></div>
+<div style="height: 90px;"></div>
 
 <!-- ================= COMMITTEE ================= -->
 <section class="committee-section">
@@ -262,6 +267,12 @@
 <footer>
   <p>© 2026 FAST-SD Conference | Amity University Haryana</p>
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>

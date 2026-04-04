@@ -11,11 +11,16 @@
 
 <!-- Navbar -->
 <nav>
+  <!-- HAMBURGER -->
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+
   <div class="nav-left">
     <img src="logo/logo.png" alt="FAST-SD 2026 Logo" class="logo">
   </div>
 
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
     <a href="committee.html">Committee</a>
     <a href="papers.html">Papers</a>
@@ -27,6 +32,7 @@
 
 <!-- Hero -->
 <section class="hero">
+  
   <div class="hero-content">
 
     <!-- ORGANIZER -->
@@ -185,30 +191,6 @@
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- About University-->
 <section class="about-section">
     <div class="about-container">
@@ -228,9 +210,15 @@
       researchers and professionals committed to sustainable development.
     </p>
      <!-- RIGHT: IMAGE -->
-    <div class="about-image">
+    <!-- <div class="about-image">
       <img src="logo/amity.jpg" alt="Amity University Haryana">
-    </div>
+    </div> -->
+    <div class="about-image">
+  <video autoplay muted loop playsinline>
+    <source src="video/video.MP4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
   </div>
   </div>
 </section>
@@ -267,6 +255,12 @@
 <footer>
   <p>© 2026 FAST-SD Conference | Amity University Haryana</p>
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
