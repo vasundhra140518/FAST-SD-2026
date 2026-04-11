@@ -175,50 +175,53 @@ nav {
   border-radius: 10px; /* optional */
 }
 
-/* ================= HERO BUTTONS ================= */
-.hero-buttons {
-  margin-top: 25px;
+/* Container for Top Logos */
+.top-logos {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
-/* BASE BUTTON */
-.btn {
-  padding: 12px 26px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
+.top-logos img {
+  height: 100px; /* Adjust based on your logo size */
+  width: auto;
 }
 
-/* GOLD BUTTON (PRIMARY) */
-.btn-gold {
-  background: linear-gradient(135deg, #c8a951, #a8893d);
-  color: white;
-  box-shadow: 0 4px 15px rgba(200, 169, 81, 0.4);
+/* Container for Bottom Logos */
+.bottom-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on mobile */
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.btn-gold:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(200, 169, 81, 0.6);
+.bottom-logos img {
+  height: 85px; /* Slightly smaller for the row of 7 */
+  width: auto;
 }
 
-/* OUTLINE BUTTON (SECONDARY) */
-.btn-outline {
-  border: 1.5px solid rgba(255, 255, 255, 0.6);
-  color: #ffffff;
-  background: transparent;
+/* Apply to all logos in both sections */
+.top-logos img, 
+.bottom-logos img {
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 4px; /* Optional: smooths out logo edges */
 }
 
-.btn-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #ffffff;
-  transform: translateY(-3px);
+/* The Hover Effect */
+.top-logos img:hover, 
+.bottom-logos img:hover {
+  transform: scale(1.15); /* Makes the logo 15% larger */
+  filter: brightness(1.2); /* Makes the logo slightly brighter */
+  
+  /* Adds a subtle "lift" effect using a shadow */
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.4));
 }
+
 
 /* ================= SECTION ================= */
 section {
@@ -597,4 +600,60 @@ footer {
   }
 }
 
+/* ================= RESPONSIVE LOGO LOGIC ================= */
+@media (max-width: 768px) {
+  /* Top Logos: Stack vertically */
+  .top-logos {
+    flex-direction: column;
+    gap: 15px;
+  }
 
+  /* Bottom Logos: 2-2-2-1 Layout */
+  .bottom-logos img {
+    /* (100% / 2) - gap = roughly 45% width to force 2 per row */
+    width: 40%; 
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* The 7th logo (last child) will take full width or center itself */
+  .bottom-logos img:last-child {
+    width: 50%; 
+  }
+}
+
+/* Specific overrides for the Aim and Scope table */
+.aim-table {
+  table-layout: fixed; /* Forces equal column widths */
+}
+
+.aim-table th {
+  padding: 15px 10px;
+  vertical-align: middle;
+}
+
+/* Ensure all columns have the same weight (removes the bold first column) */
+.aim-table td {
+  font-weight: 400 !important; 
+  color: #444 !important;
+  text-align: left;
+  padding: 20px 15px;
+  line-height: 1.8;
+  font-size: 14px;
+  vertical-align: top; /* Keeps bullets aligned at the top */
+}
+
+/* Zebra striping for readability within the large table */
+.aim-table tbody tr:hover td {
+  background: #fdfdfd;
+}
+
+/* Responsive adjustment for the table on mobile */
+@media (max-width: 768px) {
+  .aim-table {
+    table-layout: auto; /* Allow scrolling on mobile */
+  }
+  .aim-table td {
+    min-width: 250px; /* Prevents text from becoming too squashed */
+  }
+}
